@@ -1,0 +1,181 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\usepackage{graphicx}
+\author{Yeabin Moon}
+\title{Problem set 3}
+\begin{document}
+	\section*{Question 1}
+	\subsection*{a}
+	
+	\subsection*{b}
+	\begin{equation*}
+	f(tK,tL)=\frac{10tKtL}{tK+tL}=\frac{t10KL}{K+L}=tf(K,L)
+	\end{equation*}
+	The function exhibits homogeneous of degree 1, and constant returns to scale.
+	
+	\subsection*{c}
+	Name?
+	\subsection*{d}
+	I may need to prove f is strictly increasing first.
+	
+	Need to solve
+	\begin{equation}
+	\text{min}_{L,K\in \mathbb{R}_+} wL+rK \;\;\text{s.t.}\;\;f(K,L)\ge y^o
+	\end{equation}
+	Since $f$ is strictly increasing, the constraint will always be binding a solution. 
+	\begin{equation}
+	\text{min}_{L,K\in \mathbb{R}_+} wL+rK \;\;\text{s.t.}\;\;f(K,L) = y^o
+	\end{equation}
+	Form the Lagrangian
+	\begin{equation}
+	\mathcal{L}(K,L,\lambda) \equiv wL+rK - \lambda\ \left( \frac{10KL}{K+L}-y^o \right) 
+	\end{equation}
+	Then,
+	\begin{equation}
+	\frac{\partial \mathcal{L}}{\partial L} = w - \lambda \left( \frac{10K(K+L)-10KL}{(K+L)^2}  \right) = w- \lambda \frac{10K^2}{(K+L)^2} = 0
+	\end{equation}
+	
+	\begin{equation}
+	\frac{\partial \mathcal{L}}{\partial K} = r - \lambda \left( \frac{10L(K+L)-10KL}{(K+L)^2}  \right) = r- \lambda \frac{10L^2}{(K+L)^2} = 0
+	\end{equation}
+	
+	\begin{equation}
+	\frac{\partial \mathcal{L}}{\partial \lambda} =\frac{10KL}{K+L} - y^o = 0
+	\end{equation}
+	
+	They imply 
+	\begin{equation}
+	\frac{w}{r}=\left( \frac{K}{L}\right) ^2
+	\end{equation}
+	Then, we have $K = \sqrt{\frac{w}{r}}L$.
+	
+	\begin{equation}
+	y^o = 10\frac{\sqrt{\frac{w}{r}}L\times L}{\sqrt{\frac{w}{r}} L + L} = 10L\frac{\sqrt{\frac{w}{r}}}{1+\sqrt{\frac{w}{r}}}
+	\end{equation}
+	\begin{equation}
+	L = \frac{y^o}{10}\frac{\sqrt{\frac{w}{r}}+\frac{w}{r}}{\frac{w}{r}}
+	\end{equation}
+	Now similarly we have $L = K\sqrt{\frac{r}{w}}$
+	\begin{equation}
+	y^o = 10\frac{\sqrt{\frac{r}{w}}K\times K}{\sqrt{\frac{r}{w}} K + K} = 10K\frac{\sqrt{\frac{r}{w}}}{1+\sqrt{\frac{r}{w}}}
+	\end{equation}	
+	In sum,
+	\begin{equation}
+	L(w,r,y^o)\equiv \frac{y^o}{10}\frac{\sqrt{\frac{w}{r}}+\frac{w}{r}}{\frac{w}{r}}
+	\end{equation}
+	
+	\begin{equation}
+	K(w,r,y^o)\equiv \frac{y^o}{10}\frac{\sqrt{\frac{r}{w}}+\frac{r}{w}}{\frac{r}{w}}
+	\end{equation}
+	
+	\subsection*{e}
+	\subsubsection*{i}
+	\begin{equation}
+	c(w,r,y^o)\equiv w \frac{y^o}{10}\frac{\sqrt{\frac{w}{r}}+\frac{w}{r}}{\frac{w}{r}} + r \frac{y^o}{10}\frac{\sqrt{\frac{r}{w}}+\frac{r}{w}}{\frac{r}{w}}=\frac{y^0}{10}\left( 2\sqrt{wr} + w +r \right) 
+	\end{equation}
+	\begin{equation*}
+	LMC = \frac{\partial c(w,r,y^o)}{\partial y^o} = \frac{1}{10}( 2\sqrt{wr} + w +r)
+	\end{equation*}
+	\begin{equation*}
+	LAC = \frac{c(w,r,y^o)}{y^o}\equiv \frac{1}{10}( 2\sqrt{wr} + w +r)
+	\end{equation*}
+	
+	\subsubsection*{ii}
+	\begin{equation*}
+	c(tw,tr,y^o) = \frac{y^o}{10}\left(2\sqrt{twtr}  +tw+tr  \right)=\frac{y^o}{10}\left(2t\sqrt{wr}+t(w+r)\right) =tc(w,r,y^o)  
+	\end{equation*}
+	The cost function exhibits homogeneous of degree 1.
+	\begin{equation}
+	c(w,r,y) = y\times \frac{1}{10}\left(2\sqrt{wr}+w+r \right)=y^\frac{1}{1}\times c(w,r,1) 
+	\end{equation}
+	\begin{equation}
+	L(w,r,y)\equiv y\times\frac{1}{10}\frac{\sqrt{\frac{w}{r}}+\frac{w}{r}}{\frac{w}{r}}=y^{\frac{1}{1}}\times L(w,y,1)
+	\end{equation}
+	
+	\begin{equation}
+	K(w,r,y)\equiv y\times \frac{1}{10}\frac{\sqrt{\frac{r}{w}}+\frac{r}{w}}{\frac{r}{w}}=y^{\frac{1}{1}}\times K(w,r,1)
+	\end{equation}
+	
+	\subsection*{f}
+	We have 
+	\begin{equation*}
+	c(1,4,y)=\frac{y}{10}\times 9=\frac{9}{10}y
+	\end{equation*}
+	\begin{equation*}
+	AC = \frac{9}{10},\;\;\;MC = \frac{9}{10}
+	\end{equation*}
+	
+	\section*{2}
+	\subsection*{a}
+
+	\includegraphics[scale=.5]{isoquant}
+	
+	\begin{equation*}
+	MRTS_{12}=\frac{MP_1}{MP_2}=\frac{\frac{1}{2}(x_1^2+x_2^2)^{-1/2}2x_1}{\frac{1}{2}(x_1^2+x_2^2)^{-1/2}2x_2}=\frac{x_1}{x_2}
+	\end{equation*}
+	
+	\subsection*{b}
+	
+	\includegraphics[scale=.5]{isoquant}
+	
+	Since the Better set is not convex, $f$ is not a quasi-concave function.
+	
+	\subsection*{c}
+	\subsubsection*{i}
+	
+	\begin{equation}
+	\text{min}_{x_1,x_2\in \mathbb{R}_+} w_1x_1+w_2x_2 \;\;\text{s.t.}\;\;f(x_1,x_2)\ge y
+	\end{equation}
+	Since $f$ is strictly increasing, the constraint will always be binding a solution. 
+	\begin{equation}
+	\text{min}_{x_1,x_2\in \mathbb{R}_+} w_1x_1+w_2x_2 \;\;\text{s.t.}\;\;f(x_1,x_2)= y
+	\end{equation}
+	Form the Lagrangian
+	\begin{equation}
+	\mathcal{L}(x_1,x_2,\lambda) \equiv w_1x_1+w_2x_2 - \lambda\ \left( ( x_1^2+x_2^2)^{1/2} - y \right)
+	\end{equation}
+	Then,
+	\begin{equation}
+	\frac{\partial \mathcal{L}}{\partial x_1} = w_1 - \lambda \left( \frac{1}{2}(x_1^2+x_2^2)^{-1/2}2x_1  \right) = 0
+	\end{equation}
+	
+	\begin{equation}
+	\frac{\partial \mathcal{L}}{\partial x_2} = w_2 - \lambda \left( \frac{1}{2}(x_1^2+x_2^2)^{-1/2}2x_2  \right) = 0
+	\end{equation}
+	
+	\begin{equation}
+	\frac{\partial \mathcal{L}}{\partial \lambda} =(x_1^2+x_2^2)^{1/2} - y = 0
+	\end{equation}
+	
+	They imply 
+	\begin{equation}
+	\frac{w_1}{w_2}=\frac{x_1}{x_2}
+	\end{equation}
+	Then, we have $x_1=\frac{w_1}{w_2}x_2$. So we have
+	
+	\begin{equation*}
+	y = (x_1^2+x_2^2)^{1/2}=\left( \left( \frac{w_1}{w_2}\right) ^2x_2^2+x_2^2 \right)^{1/2}=\left( \left( 1+ \left( \frac{w_1}{w_2}\right) ^2\right) x_2^2\right) ^{1/2} 
+	\end{equation*}
+	
+	\begin{equation*}
+	x_2(w_1,w_2,y)\equiv \frac{y}{\sqrt{1+\left( w_1/w_2\right) }}
+	\end{equation*}
+	Similarly, $x_2 = \frac{w_2}{w_1}x_1$.
+	\begin{equation*}
+	y = (x_1^2+x_2^2)^{1/2}=\left( x_1^2+ \left( \frac{w_2}{w_1}\right) ^2x_1^2 \right)^{1/2}=\left( \left( 1+ \left( \frac{w_2}{w_1}\right) ^2\right) x_1^2\right) ^{1/2} 
+	\end{equation*}
+	\begin{equation*}
+	x_1(w_1,w_2,y)\equiv \frac{y}{\sqrt{1+\left( w_2/w_1\right) }}
+	\end{equation*}
+	
+	\subsection*{ii}
+	It depends on $\frac{w_1}{w_2}$.
+	
+	$x_1 = 0$ and $x_2 = c(w,y)/w_2$, or $x_2 = 0$ and $x_1 = c(w,y)/w_1$.
+	
+\end{document}
